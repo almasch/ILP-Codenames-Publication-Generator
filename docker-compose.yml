@@ -1,0 +1,17 @@
+services:
+  neo4j:
+    image: neo4j:5-community
+    ports:
+      - 127.0.0.1:7474:7474
+      - 127.0.0.1:7687:7687
+    environment:
+      - NEO4J_dbms_default__listen__address=0.0.0.0
+      - NEO4J_dbms_memory_heap_initial__size=2G
+      - NEO4J_dbms_memory_heap_max__size=4G
+      - NEO4J_AUTH=none
+    volumes:
+      - ilp-codenames-neo4j-data:/data
+
+volumes:
+  ilp-codenames-neo4j-data:
+    external: true

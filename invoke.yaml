@@ -1,0 +1,19 @@
+# folder which contains all prepared Aleph workspaces.
+aleph_experiments_dir: aleph_plays_codenames
+
+exp_normal_dir: normal
+exp_noise_dir: allow_noise
+exp_combined_dir: combined_knowledge_tree
+
+seeds_file: assets/seeds.txt
+words_file: assets/words.txt
+
+# file name for Aleph processing output.
+protocol_filename: protocol.txt
+error_filename: error.txt
+
+# number of maximal parallel execution processes of swipl.
+max_workers: 6
+
+# url of Neo4j database with GermaNet knowledge tree.
+neo4j_location: localhost

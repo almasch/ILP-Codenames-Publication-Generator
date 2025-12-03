@@ -91,60 +91,7 @@ seed/
 
 ## Activity Diagram – Workspace Creation
 
-```plantuml
-@startuml
-title Aleph Project Files Generation
-
-skinparam backgroundColor transparent
-skinparam ActivityBackgroundColor lightGrey
-skinparam ActivityBorderColor black
-
-start
-
-:Generate Codenames Game Board;
-note right
-    Randomly select 25 words from 200 Codenames cards.
-    Assign them to Friends, Innocents, Enemies, and Killer.
-end note
-
--> examples.pl;
-
-:Generate background knowledge;
-note right
-    For each word, retrieve semantic relations
-    from the GermaNet Neo4j database.
-end note
-
--> background.pl
-rules.pl;
-
-:Configure Aleph;
-note right
-    Define modes and determinations,
-    and split examples into positive & negative cases.
-end note
-
--> experiment.b
-experiment.f
-experiment.n;
-
-:Add helper files;
-note right
-  Load Aleph and run the induce process.
-end note
-
--> action.pl;
-
-:Execute Aleph;
-note right
- Induce solutions for game boards
-end note
-
--> protocol.txt;
-
-stop 
-@enduml
-```
+![Diagramm](https://plantuml.informatik.fh-nuernberg.de/png/RP9DRXin38NtEWLNNRb64BIR6YZWk74Gj0YAta2ME6F54ZcWE8bz-r9ZetRjp6AW7uhytYCrQKPOPXosy5lu5OF2EcMiy8I4uZKnELTtYGOlli36XrqlF59SSMO15K_Lhf3q8cePDBqbFJnSHUVKR_L9yF1HB4j4ESPjiZsqikf5dVjsGa5OSKJofT7P7nxOIrmuOhkIbjg1VNyyHIxv01LpatF_5TujTuLEkC3ztTr5cc09wdnwjgmrzGIwnGBAi9Q45EiCdeauc3nRFXAMXBQm2l0pvOmoTnO5ZS2vpzy1zxuCvjvyo8jByBDji2D-pnXxl05VctBqOJlXpa1GZU4DJKVnf2dOIPuQKgVmIOxXMgUa-1TKU47-yWhHgz_uYbTePmI3SpAUALTCNUf7ESt13TSFx18X57EjJj8ZgfLCT8IPJK7jl0uvwJyF897vE71Drc24Jq3O-saPZAxUE3UWf696ppVkOjDTRgZXBcE4BMOxXAvDwXNlB_RnDD2DISQffmOJnu0mY3MpNXVteIavsV6unp3gXsOy7vDKpkCa7JfhMTz6STD6iVwVrMef1yvptUkYJJCFy1S0)
 
 ---
 
